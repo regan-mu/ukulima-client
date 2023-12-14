@@ -5,7 +5,7 @@ async function getData(id) {
 export default async function ActivityLayout({params, children}) {
     const data = await getData(params.id);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 p-5 mt-5 h-[100vh] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 p-5 mt-5 h-auto md:h-[100vh] overflow-hidden">
             <div className="flex flex-col gap-5">
                 <h2 className="text-lg font-poppins text-gray-1000 text-center w-full h-auto uppercase">{data.title}</h2>
                 <div className="rounded-lg bg-gray-100 p-5 h-32 flex flex-col justify-center items-center w-full border border-gray-300">
